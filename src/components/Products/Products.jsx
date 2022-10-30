@@ -4,8 +4,8 @@ import { Grid } from '@material-ui/core';
 import Product from './Product/Product';
 
 const products = [
-  { id: 1, name: 'Painting', description: "Man-of-war run a rig heave to grog blossom overhaul Pirate Round aye Cat o'nine tails tackle aft. Ye scourge of the seven seas come about pressgang swing the lead interloper draft gunwalls bowsprit six pounders.", price: '$example'},
-  { id: 2, name: 'Charm', description:"To go on account gunwalls galleon American Main strike colors fluke Buccaneer tackle capstan rum.", price: '$example'},
+  { id: 1, name: 'Painting', description: "Man-of-war run a rig heave.", price: '$example'},
+  { id: 2, name: 'Charm', description:"To go on account gunwalls galleon.", price: '$example'},
 ];
 
 const Products = () => {
@@ -19,7 +19,7 @@ const Products = () => {
       ))}
     </Grid>
   </main>
-  )
-}
+  );
+};
 
 export default Products;
