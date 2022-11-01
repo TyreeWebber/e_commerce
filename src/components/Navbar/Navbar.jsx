@@ -2,9 +2,12 @@ import React from 'react';
 import { AppBar, Toolbar, IconButton, Badge, MenuItem, Menu, Typography } from '@material-ui/core';
 import { CallMissedSharp, ShoppingCart } from '@material-ui/icons';
 
-import logo from '../../assets/placeholder';
+import logo from '../../assets/placeholder.png';
+import useStyles from './styles';
 
 const Navbar = () => {
+  const classes = useStyles();
+
   return (
     <>
     <AppBar position="fixed" className={classes.appBar} color="inherit">
