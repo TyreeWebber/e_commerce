@@ -5,13 +5,8 @@ import Product from './Product/Product';
 
 import useStyles from './styles';
 
-const products = [
-  { id: 1, name: 'Painting', description: "Placeholder Description.", price: '$example', image: 'https://www.firstbenefits.org/wp-content/uploads/2017/10/placeholder-1024x1024.png'},
-  { id: 2, name: 'Charm', description:"Placeholder Description.", price: '$example', image: 'https://www.firstbenefits.org/wp-content/uploads/2017/10/placeholder-1024x1024.png'},
-  { id: 3, name: 'Pendant', description :"Placeholder Description.", price: '$example', image: 'https://www.firstbenefits.org/wp-content/uploads/2017/10/placeholder-1024x1024.png'},
-];
 
-const Products = () => {
+const Products = ({ products }) => {
   const classes = useStyles();
 
   return (
