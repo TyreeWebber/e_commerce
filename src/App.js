@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 //commerceJS
 import { commerce } from './lib/commerce';
 //components
-import { Products, Navbar } from './components';
+import { Products, Navbar, Cart } from './components';
 
 const App = () => {
   const [products, setProducts] = useState([]);
@@ -35,7 +35,8 @@ const App = () => {
   return (
     <div>
       <Navbar totalItems={cart.total_items} />
-      <Products products={products} onAddToCart={handleAddToCart} />
+      {/* <Products products={products} onAddToCart={handleAddToCart} /> */}
+      <Cart cart={cart} />
     </div>
   )
 }
