@@ -4,6 +4,8 @@ import React, { useState, useEffect } from 'react';
 import { commerce } from './lib/commerce';
 //components
 import { Products, Navbar, Cart } from './components';
+//reactRouter
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 const App = () => {
   const [products, setProducts] = useState([]);
@@ -33,12 +35,16 @@ const App = () => {
   console.log(cart);
 
   return (
+    <Router>
     <div>
       <Navbar totalItems={cart.total_items} />
-      {/* <Products products={products} onAddToCart={handleAddToCart} /> */}
-      <Cart cart={cart} />
+      <Routes>
+        <Route path='/' element={<Products products = {products} onAddToCart = {handleAddToCart}/>} />
+        <Route path='/cart' element={<Cart cart={cart} />} />
+      </Routes>
     </div>
-  )
+    </Router>
+  );
 }
 
 export default App
