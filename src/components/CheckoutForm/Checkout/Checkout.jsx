@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Paper, Stepper, Step, StepLabel, Typography } from '@material-ui/core';
 import useStyles from './styles';
 
-const steps = ['Shipping address', 'Payment details'];
+const steps = ['Shipping Address', 'Payment Details'];
 
 
 const Checkout = () => {
