@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 //commerceJS
 import { commerce } from './lib/commerce';
 //components
-import { Products, Navbar, Cart } from './components';
+import { Products, Navbar, Cart, Checkout } from './components';
 //reactRouter
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
@@ -57,6 +57,7 @@ const App = () => {
           handleRemoveFromCart={handleRemoveFromCart}
           handleEmptyCart={handleEmptyCart}
          />} />
+         <Route path='/checkout' Checkout cart={cart} order={order} onCaptureCheckout={handleCaptureCheckout} error={errorMessage} />
       </Routes>
     </div>
     </Router>
