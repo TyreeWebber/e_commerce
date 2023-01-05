@@ -57,7 +57,7 @@ const App = () => {
           handleRemoveFromCart={handleRemoveFromCart}
           handleEmptyCart={handleEmptyCart}
          />} />
-         <Route path='/checkout' Checkout cart={cart} order={order} onCaptureCheckout={handleCaptureCheckout} error={errorMessage} />
+         <Route path='/checkout' element={<Checkout />} />
       </Routes>
     </div>
     </Router>
