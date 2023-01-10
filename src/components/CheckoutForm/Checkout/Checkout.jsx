@@ -9,6 +9,10 @@ const Checkout = () => {
   const [activeStep, setActiveStep] = useState(0);
   const classes = useStyles();
 
+  const Form = () => activeStep === 0 
+      ? <AddressForm />
+      : <PaymentForm />
+
   return (
     <>
       <div className={classes.toolbar} />
@@ -22,6 +26,7 @@ const Checkout = () => {
               </Step>
             ))}
           </Stepper>
+          {activeStep === steps.length ? <Confirmation /> : <Form />}
         </Paper>
       </main>
     </>
