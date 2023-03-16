@@ -25,11 +25,11 @@ const AddressForm = ({ checkoutToken }) => {
 
   useEffect(() => {
     fetchShippingCountries(checkoutToken.id)
-  }, [cart]);
+  }, []);
 
   return (
     <>
-      <Typography variant ="h6" gutterBottom>Shipping Address</Typography>
+      <Typography variant ="h6" gutterBottom align = "center">Shipping Address</Typography>
       <FormProvider {...methods}>
         <form onSubmit=''>
           <Grid container spacing={3}>
@@ -37,10 +37,10 @@ const AddressForm = ({ checkoutToken }) => {
             <FormInput required name='lastName' label='Last Name' />
             <FormInput required name='address' label='Address' />
             <FormInput required name='email' label='Email' />
-            <FormInput required name='city' label='City' />
+            <FormInput required name='city' label='City' /> 
             <FormInput required name='postalcode' label='Postal Code' />
           </Grid>
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={12} sm={7}>
             <InputLabel>Shipping Country</InputLabel>
             <Select value={shippingCountry} fullWidth onChange={(e) => setShippingCountry(e.target.value)}>
               {countries.map((country) => (
@@ -50,7 +50,7 @@ const AddressForm = ({ checkoutToken }) => {
               ))}
             </Select>
           </Grid>
-          <Grid item xs={12} sm={6}>
+          {/* <Grid item xs={12} sm={6}>
             <InputLabel>Shipping Subdivision</InputLabel>
             <Select value={} fullWidth onChange={}>
                 <MenuItem key={} value={}>
@@ -65,7 +65,7 @@ const AddressForm = ({ checkoutToken }) => {
                   Select
                 </MenuItem>
             </Select>
-          </Grid>
+          </Grid> */}
         </form>
       </FormProvider>
     </>
